@@ -4,6 +4,7 @@ import random
 import os
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False  # ✅ 這行讓回傳的 JSON 用 UTF-8 顯示中文
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 REGION_CODE = 'TW'
