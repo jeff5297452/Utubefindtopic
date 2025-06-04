@@ -11,7 +11,7 @@ REGION_CODE = 'TW'
 
 @app.route('/trending', methods=['GET'])
 def get_trending_video():
-    url = f'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode={REGION_CODE}&maxResults=10&key={YOUTUBE_API_KEY}'
+    url = f'https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=TW&videoCategoryId=24&key={YOUTUBE_API_KEY}'
     response = requests.get(url)
     data = response.json()
 
